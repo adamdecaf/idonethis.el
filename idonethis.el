@@ -4,8 +4,9 @@
 (eval-when-compile (require 'cl))
 
 (defgroup idonethis nil
-  "idonethis"
-  :group 'applications)
+  "idonethis methods"
+  :prefix "idonethis-"
+  :group 'idonethis)
 
 (defconst cookie-header "Cookie: sessionid=hbq8qeymypwy6amhiierfhcianbdbq6t;")
 (defconst base-idonethis-url "https://idonethis.com/api/v3/team/banno-grip/dones/?start=%s&end=%s")
