@@ -10,10 +10,12 @@
 (defconst base-idonethis-url "https://idonethis.com/api/v3/team/banno-grip/dones/?start=%s&end=%s")
 (defconst base-command-string "curl '%s' -H '%s' --compressed | json -a owner done_date markedup_text | sort | sed 's/$/\\n\\n/g'")
 
+;;;###autoload
 (defun idonethis-send (stuff)
   (interactive "sWhat have you done today?: ")
   (shell-command (format "idonethis \"%s\"&" (shell-quote-argument stuff))))
 
+;;;###autoload
 (defun idonethis-dones (&optional maybe-start-date &optional maybe-end-date)
   (interactive)
   (let* ((start-date (if maybe-start-date
