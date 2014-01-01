@@ -5,3 +5,5 @@
 (defun idonethis-send (stuff)
   (interactive "sWhat have you done today?: ")
   (shell-command (format "idonethis '%s'" stuff)))
+
+(provide 'idonethis)
