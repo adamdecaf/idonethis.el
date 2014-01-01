@@ -1,6 +1,7 @@
 ;; idonethis.el
 
 ;; Some methods that wrap the cli tool
+(eval-when-compile (require 'cl))
 
 (defgroup idonethis nil
   "idonethis"
