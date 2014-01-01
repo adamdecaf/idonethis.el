@@ -25,10 +25,11 @@
         (url (format base-idonethis-url start-date end-date))
         (command (format base-command-string url cookie-header))
         (command-res (shell-command-to-string (concat command "&")))
-        (idonethis-buffer (find-file (concat "idonethis-done-" start-date "-to-" end-date))))
+        (idonethis-buffer (find-file (concat "*idonethis-done-" start-date "-to-" end-date "*"))))
     (switch-to-buffer idonethis-buffer nil t)
     (erase-buffer)
     (insert command-res)
+    (save-buffer)
     (delete-other-windows)
     (goto-line 4)))
 
